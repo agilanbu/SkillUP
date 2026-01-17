@@ -1,6 +1,8 @@
-
+## Project Structure 
 
 **Clean Architecture + Jetpack Compose + MVVM, focusing on Authentication (Login/Register) and a Profile screen**
+
+```text
 com.agilanbu.skillup
 │
 ├── domain
@@ -33,5 +35,4 @@ com.agilanbu.skillup
 │        └── AppNavHost.kt
 ├── di
 │   └── AppModule.kt                  // Hilt modules for dependency injection
-│
 └── MainActivity.kt
