@@ -6,11 +6,14 @@ import com.agilanbu.skillup.domain.model.User
 import com.agilanbu.skillup.domain.usecase.GetProfileUseCase
 import com.agilanbu.skillup.domain.usecase.LoginUseCase
 import com.agilanbu.skillup.domain.usecase.RegisterUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class AuthViewModel(
+@HiltViewModel
+class AuthViewModel @Inject constructor(
     private val loginUseCase: LoginUseCase,
     private val registerUseCase: RegisterUseCase,
     private val getProfileUseCase: GetProfileUseCase

@@ -3,9 +3,10 @@ package com.agilanbu.skillup.data.repository
 import com.agilanbu.skillup.data.datasource.AuthDataSource
 import com.agilanbu.skillup.domain.model.User
 import com.agilanbu.skillup.domain.repository.AuthRepository
+import javax.inject.Inject
 
 
-class AuthRepositoryImpl(private val dataSource: AuthDataSource) : AuthRepository {
+class AuthRepositoryImpl @Inject constructor (private val dataSource: AuthDataSource) : AuthRepository {
     override suspend fun login(email: String, password: String): User? =
         dataSource.login(email, password)
 
