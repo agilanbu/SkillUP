@@ -6,8 +6,12 @@ import com.agilanbu.skillup.domain.repository.AuthRepository
 import com.agilanbu.skillup.domain.usecase.GetProfileUseCase
 import com.agilanbu.skillup.domain.usecase.LoginUseCase
 import com.agilanbu.skillup.domain.usecase.RegisterUseCase
+import dagger.Module
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 
-
+@Module
+@InstallIn(SingletonComponent::class)
 object AppModule {
     private val dataSource = AuthDataSource()
     private val repository: AuthRepository = AuthRepositoryImpl(dataSource)
