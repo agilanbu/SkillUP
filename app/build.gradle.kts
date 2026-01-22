@@ -1,17 +1,18 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
+    // The line below is removed because AGP 9.0 adds it automatically
+    // alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
 }
 
 android {
     namespace = "com.agilanbu.skillup"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.agilanbu.skillup"
         minSdk = 24
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
@@ -31,9 +32,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlinOptions {
-        jvmTarget = "11"
-    }
+//    kotlinOptions {
+//        jvmTarget = "11"
+//    }
     buildFeatures {
         compose = true
     }
